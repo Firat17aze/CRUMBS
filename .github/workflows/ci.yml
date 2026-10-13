@@ -218,6 +218,12 @@ jobs:
           python -m pip install -U pip
           python -m pip install -U platformio
 
+      - name: Check PlatformIO package contents
+        run: |
+          pio pkg pack . --output "$RUNNER_TEMP/CRUMBS.tar.gz"
+          tar -tzf "$RUNNER_TEMP/CRUMBS.tar.gz" | LC_ALL=C sort > "$RUNNER_TEMP/platformio-package-files.txt"
+          diff -u tests/platformio-package-files.txt "$RUNNER_TEMP/platformio-package-files.txt"
+
       # The projects pin the registry package so that a user's `pio run`
       # builds a release; CI builds the tree, so point every lib_deps at it.
       - name: Build against this checkout, not the registry

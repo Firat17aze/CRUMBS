@@ -6,6 +6,10 @@ All notable changes to CRUMBS are documented in this file.
 
 ## [Unreleased]
 
+### Fixed
+
+- The PlatformIO package excludes documentation, tests and local build or planning artifacts again, and CI pins the packed file list so future manifest changes cannot silently add files.
+
 ## [0.15.0] - 2026-10-04
 
 ### Added

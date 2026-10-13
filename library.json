@@ -42,9 +42,26 @@
       "bindings",
       "pyproject.toml",
       "uv.lock",
+      "test",
+      "tests",
+      "doc",
+      "docs",
+      "*.doxyfile",
+      "**/build/",
+      "build*",
+      "dist",
+      ".pio",
       "tests/golden_vectors",
       ".ruff_cache",
-      ".venv"
+      ".venv",
+      ".mypy_cache",
+      "__pycache__",
+      "roadmaps",
+      "planning",
+      "working",
+      "_reference",
+      "_archive",
+      "*.log"
     ]
   }
 }
